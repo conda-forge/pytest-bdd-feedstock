@@ -1,5 +1,5 @@
 {% set name = "pytest-bdd" %}
-{% set version = "3.1.1" %}
+{% set version = "3.2.0" %}
 
 package:
   name: '{{ name|lower }}'
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5cac1c61ade5548f4531233e770e40e993a6b894d799310a45d5e1b8414cb764
+  sha256: 3ef6018c7002eb91ec614931eabe0f90016b71f22486c717dc597c5df957adec
 
 build:
   noarch: python
