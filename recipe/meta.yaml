@@ -1,20 +1,20 @@
 {% set name = "pytest-bdd" %}
-{% set version = "3.2.1" %}
+{% set version = "3.4.0" %}
 
 package:
-  name: '{{ name|lower }}'
-  version: '{{ version }}'
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 17e73d2fe119de15bfc7fc1fe639fa4df9ab931e5aa552435fdddcf100c97ec5
+  sha256: 20ce2519fc5fe08a74d160aba52d6e5e46d99da949bc929591eefd063a8e573b
 
 build:
   noarch: python
   number: 0
   entry_points:
     - pytest-bdd = pytest_bdd.scripts:main
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -43,10 +43,10 @@ about:
   license_family: MIT
   license_file: LICENSE.txt
   summary: BDD for pytest
-  description: "pytest-bdd implements a subset of the Gherkin language to enable automating project requirements testing and to facilitate behavioral driven development."
-  dev_url: 'https://github.com/pytest-dev/pytest-bdd'
-  doc_url: 'https://github.com/pytest-dev/pytest-bdd'
+  description: pytest-bdd implements a subset of the Gherkin language to enable automating project requirements testing and to facilitate behavioral driven development.
+  dev_url: https://github.com/pytest-dev/pytest-bdd
+  doc_url: https://github.com/pytest-dev/pytest-bdd
 
 extra:
-  recipe-maintainers: 
+  recipe-maintainers:
     - breathe
