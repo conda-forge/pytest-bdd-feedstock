@@ -5,7 +5,7 @@ Home: https://github.com/pytest-dev/pytest-bdd
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: BDD for pytest
 
