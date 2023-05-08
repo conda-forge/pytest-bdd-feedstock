@@ -1,13 +1,13 @@
 {% set name = "pytest-bdd" %}
-{% set version = "3.2.1" %}
+{% set version = "6.0.1" %}
 
 package:
   name: '{{ name|lower }}'
   version: '{{ version }}'
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 17e73d2fe119de15bfc7fc1fe639fa4df9ab931e5aa552435fdddcf100c97ec5
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: f894e589c9ee9e6a66c54e4917fafbbd11801fce9ce01e9b56dc15ccc57e4620
 
 build:
   noarch: python
@@ -21,15 +21,13 @@ requirements:
     - python
     - pip
   run:
-    - python
-    - pip
-    - glob2
+    - python >=3.7
     - mako
     - parse
+    - glob2
     - parse_type
-    - py
-    - pytest >=3.0.0
-    - six >=1.9.0
+    - pytest >=6.2.0
+    - typing_extensions
 
 test:
   imports:
