@@ -151,4 +151,5 @@ Feedstock Maintainers
 
 * [@PertuyF](https://github.com/PertuyF/)
 * [@breathe](https://github.com/breathe/)
+* [@m0nonoke](https://github.com/m0nonoke/)
 
