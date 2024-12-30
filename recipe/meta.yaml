@@ -6,23 +6,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 9dfeb1d8565d9548907f36a5a9e2c8e1e0cbac3b2724e17331b87386a19fbc16
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - pytest-bdd = pytest_bdd.scripts:main
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - poetry
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - mako
     - parse
     - parse_type
@@ -30,6 +30,8 @@ requirements:
     - typing-extensions
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pytest_bdd
   commands:
