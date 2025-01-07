@@ -14,7 +14,7 @@ build:
   number: 1
   entry_points:
     - pytest-bdd = pytest_bdd.scripts:main
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
