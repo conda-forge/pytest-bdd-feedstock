@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pytest-bdd
-  version: "8.1.0"
+  version: "9.0.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name|replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: ef0896c5cd58816dc49810e8ff1d632f4a12019fb3e49959b2d349ffc1c9bfb5
+  sha256: f22450a98345590c2b3aac5ed3412662788e0a7afac34aa8d650c14445b87046
 
 build:
   noarch: python
