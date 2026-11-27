@@ -24,11 +24,11 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - poetry-core >=1.0.0
+    - uv_build
   run:
     - python >=${{ python_min }}
     - mako
-    - gherkin-official >=29.0.0,<30.0.0
+    - gherkin-official >=29.0.0,!=31.0.0,!=32.0.0
     - packaging
     - parse
     - parse_type
