@@ -24,7 +24,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - uv_build
+    - uv-build
   run:
     - python >=${{ python_min }}
     - mako
